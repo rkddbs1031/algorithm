@@ -22,7 +22,7 @@ function solution(genres, plays) {
       if (a[1] !== b[1]) return b[1] - a[1]; // 재생된 수 대로 내림차순
       return a[0] - b[0]; // 같다면 고유번호가 낮은 순으로 정렬
     });
-    // playObj[genre]  => [ [], [], []]
+
     answer.push(...sortedPlays.slice(0, 2).map((play) => play[0]));
   }
 
