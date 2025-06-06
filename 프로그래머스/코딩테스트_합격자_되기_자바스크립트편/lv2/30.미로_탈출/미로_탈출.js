@@ -44,7 +44,7 @@ function solution(maps) {
 
   // 시작점과 도착점을 먼저 찾아 큐에 넣고 방문 여부 표시
   for (let i = 0; i < n; i++) {
-    for (let j = 0; i < m; j++) {
+    for (let j = 0; j < m; j++) {
       if (maps[i][j] === 'S') {
         // 시작점이면
         queue.push([i, j, 0, 0]); // y좌표, x좌표, 레버당김여부, 이동거리
