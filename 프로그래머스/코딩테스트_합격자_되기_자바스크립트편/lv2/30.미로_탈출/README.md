@@ -1,4 +1,4 @@
-# 다단계 칫솔 판매
+# 미로 탈출
 
 [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/159993)
 
