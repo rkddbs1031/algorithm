@@ -4,7 +4,7 @@ graph = [출발노드, 도착노드][]
 start = 시작노드
 */
 function solution(graph, start) {
-  // stack
+  // 재귀
 
   const graphObj = {};
   graph.forEach(([u, v]) => {
