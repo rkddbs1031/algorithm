@@ -104,3 +104,32 @@ function solution1(N, road, K) {
 
   return distances.filter((dist) => dist <= K).length;
 }
+
+// shift로 해보기
+function solution2(N, road, K) {
+  const graph = Array.from({ length: N + 1 }, () => []);
+  for (const [a, b, cost] of road) {
+    graph[a].push([b, cost]);
+    graph[b].push([a, cost]);
+  } // 양방향 그래프 구축
+
+  // 노드 별로 간선의 거리 비용  저장
+  const distances = Array(N + 1).fill(Infinity);
+  distances[1] = 0; // 시작점인 1번 노드 초기값 0으로
+
+  const pq = [[1, 0]]; // 노드, 비용
+
+  while (pq.length > 0) {
+    const [curNode, curCost] = pq.shift();
+
+    for (const [nextNode, nextCost] of graph[curNode]) {
+      const totalCost = nextCost + curCost;
+      if (totalCost < distances[nextNode]) {
+        distances[nextNode] = totalCost;
+        pq.push([nextNode, totalCost]);
+      }
+    }
+  }
+
+  return distances.filter((dist) => dist <= K).length;
+}
