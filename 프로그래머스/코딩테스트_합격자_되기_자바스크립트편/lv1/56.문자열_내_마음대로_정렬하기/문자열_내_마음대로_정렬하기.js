@@ -7,3 +7,7 @@ function solution(strings, n) {
     }
   });
 }
+
+/*
+N은 strings의 길이, sort 함수의 시간 복잡도 함께 고려 => O(NlogN)
+*/
