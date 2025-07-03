@@ -12,3 +12,22 @@ function solution(s) {
 
   return [conversionCount, removeZeroCount];
 }
+
+// 재귀함수로 변경
+function solution2(s) {
+  let removeZeroCount = 0;
+  let conversionCount = 0;
+
+  function binaryTransform(str) {
+    if (str === '1') return;
+
+    const c = [...str].filter((ch) => ch === '1').length;
+    removeZeroCount += str.length - c;
+    conversionCount++;
+
+    binaryTransform(c.toString(2));
+  }
+
+  binaryTransform(s);
+  return [conversionCount, removeZeroCount];
+}
