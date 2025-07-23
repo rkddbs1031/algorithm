@@ -22,3 +22,26 @@ function solution1(k, score) {
 
   return answer;
 }
+
+/*
+ 2차 문제풀이! => 훨씬 성능이 좋아졌음!!
+
+ 오름 차순으로 해서 shift를 하면 하나씩 땡겨야하기 때문에 시간 복잡도가 O(n)이 됨..
+ 따라서 내림차순으로 하고 뒤에 있는 값을 pop해보기
+*/
+
+function solution2(k, score) {
+  const hallOfFame = [];
+  const answer = [];
+
+  for (let i = 0; i < score.length; i++) {
+    hallOfFame.push(score[i]);
+    hallOfFame.sort((a, b) => b - a); // 내림차순 정렬 (가장 작은 값이 맨 뒤)
+
+    if (hallOfFame.length > k) hallOfFame.pop(); // 맨 뒤 요소 제거
+
+    answer.push(hallOfFame[hallOfFame.length - 1]); // 현재 명예의 전당 최하위 점수
+  }
+
+  return answer;
+}
