@@ -30,7 +30,6 @@ function solution(dartResult) {
 
       scores.push(score);
     } else if (ch === '*') {
-      // 스타상
       const lastScoreIdx = scores.length - 1;
       scores[lastScoreIdx] *= 2;
       if (lastScoreIdx > 0) scores[lastScoreIdx - 1] *= 2;
