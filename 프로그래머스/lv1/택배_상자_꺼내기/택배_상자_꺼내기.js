@@ -15,10 +15,12 @@ function solution(n, w, num) {
 
   for (let i = 0; i < h; i++) {
     if (i % 2) {
+      // 홀수층
       for (let j = w - 1; j >= 0 && curNum <= n; j--) {
         stack[i][j] = curNum++;
       }
     } else {
+      //짝수층
       for (let j = 0; j < w && curNum <= n; j++) {
         stack[i][j] = curNum++; // curNum 넣고 +1
       }
