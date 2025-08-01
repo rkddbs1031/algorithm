@@ -1,10 +1,10 @@
-# [1차] 다트 게임
+# 최대공약수와 최소공배수
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/17682)
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12940)
 
 ### 구분
 
-코딩테스트 연습 > 2018 KAKAO BLIND RECRUITMENT
+코딩테스트 연습 > 연습문제
 
 ### 채점결과
 
