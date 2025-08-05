@@ -1,5 +1,6 @@
 /**
  * 테스트 케이스 몇개 런타임 오류! 개선 필요.
+ * - max가 꼭 필요한 숫자인지 체크할 것.
  */
 
 function solution(numbers) {
@@ -22,4 +23,23 @@ function solution(numbers) {
       answer.push(num);
     }
   }
+}
+
+/**
+ *
+ */
+
+function solution2(numbers) {
+  const answer = Array(numbers.length).fill(-1);
+  const stack = []; // 인덱스 저장 배열
+
+  for (let i = 0; i < numbers.length; i++) {
+    while (stack.length > 0 && numbers[stack[stack.length - 1]] < numbers[i]) {
+      const idx = stack.pop();
+      answer[idx] = numbers[i];
+    }
+    stack.push(i);
+  }
+
+  return stack;
 }
