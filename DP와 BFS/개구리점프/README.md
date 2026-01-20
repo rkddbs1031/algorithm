@@ -2,7 +2,7 @@
 
 ### 구분
 
-DP 연습 문제 (LeetCode 유사) (feat.Claude AI)
+DP 연습 문제 (feat.Claude AI)
 
 ### 문제 설명
 
