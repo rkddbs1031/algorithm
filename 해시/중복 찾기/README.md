@@ -2,7 +2,7 @@
 
 ### 구분
 
-해시맵 문제 (feat.Claude AI)
+해시 문제 (feat.Claude AI)
 
 ### 문제 설명
 
