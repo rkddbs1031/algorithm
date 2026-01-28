@@ -1,10 +1,14 @@
-function solution(array, commands) {
-  const answer = [];
+function solution(d, budget) {
+  d.sort((a, b) => a - b);
 
-  for (let [i, j, k] of commands) {
-    const target = array.slice(i - 1, j).sort((a, b) => a - b)[k - 1];
-    answer.push(target);
+  let count = 0;
+
+  for (let price of d) {
+    if (budget >= price) {
+      count++;
+      budget -= price;
+    }
   }
 
-  return answer;
+  return count;
 }
