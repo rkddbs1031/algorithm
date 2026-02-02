@@ -36,18 +36,22 @@
 </ul>
 
 <h5>입출력 예</h5>
+
 <table class="table">
-        <thead><tr>
-<th>land</th>
-<th>answer</th>
-</tr>
-</thead>
-        <tbody><tr>
-<td>[[1,2,3,5],[5,6,7,8],[4,3,2,1]]</td>
-<td>16</td>
-</tr>
-</tbody>
-      </table>
+    <thead>
+        <tr>
+            <th>land</th>
+            <th>answer</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>[[1,2,3,5], [5,6,7,8], [4,3,2,1]]</td>
+            <td>16</td>
+        </tr>
+    </tbody>
+</table>
+
 <h5>입출력 예 설명</h5>
 
 <p>입출력 예 #1<br>
