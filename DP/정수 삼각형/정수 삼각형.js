@@ -24,6 +24,30 @@
  *    - 삼각형 모양 DP 배열
  *
  */
+function solution(triangle) {
+  const n = triangle.length;
+  const dp = Array.from({ length: n }, (_, i) => new Array(i + 1).fill(0));
+  dp[0][0] = triangle[0][0];
+
+  for (let i = 1; i < n; i++) {
+    for (let j = 0; j <= i; j++) {
+      let topLeft = 0;
+      let topRight = 0;
+
+      if (j - 1 >= 0) {
+        topLeft = triangle[i - 1][j - 1];
+      }
+
+      if (i > j) {
+        topRight = triangle[i - 1][j];
+      }
+
+      dp[i][j] = triangle[i][j] + Math.max(topLeft, topRight);
+    }
+  }
+
+  return Math.max(...dp[n - 1]);
+}
 
 function solution(triangle) {
   const n = triangle.length;
